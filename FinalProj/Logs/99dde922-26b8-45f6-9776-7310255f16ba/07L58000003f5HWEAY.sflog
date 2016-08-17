@@ -1,0 +1,42 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+14:00:15.5 (5029972)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+14:00:15.5 (5055701)|EXECUTION_STARTED
+14:00:15.5 (5060128)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+14:00:15.5 (5991547)|SYSTEM_MODE_ENTER|false
+14:00:15.5 (6843584)|SOQL_EXECUTE_BEGIN|[11]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c
+14:00:15.5 (10943064)|SOQL_EXECUTE_END|[11]|Rows:2
+14:00:15.5 (14649342)|SOQL_EXECUTE_BEGIN|[56]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+14:00:15.5 (18954154)|SOQL_EXECUTE_END|[56]|Rows:3
+14:00:15.5 (19216142)|USER_DEBUG|[60]|DEBUG|{}
+14:00:15.5 (20525912)|SYSTEM_MODE_EXIT|false
+14:00:15.5 (20607939)|SYSTEM_MODE_ENTER|false
+14:00:15.5 (20681515)|SYSTEM_MODE_EXIT|false
+14:00:15.5 (20720737)|SYSTEM_MODE_ENTER|false
+14:00:15.5 (20831353)|SYSTEM_MODE_EXIT|false
+14:00:15.5 (21018045)|FATAL_ERROR|System.ListException: List index out of bounds: 2
+
+Class.TestCustomController.NextQuestion: line 21, column 1
+AnonymousBlock: line 3, column 1
+AnonymousBlock: line 3, column 1
+14:00:15.21 (21088387)|CUMULATIVE_LIMIT_USAGE
+14:00:15.21 (21088387)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:00:15.21 (21088387)|CUMULATIVE_LIMIT_USAGE_END
+
+14:00:15.5 (21147159)|CODE_UNIT_FINISHED|execute_anonymous_apex
+14:00:15.5 (24795207)|EXECUTION_FINISHED

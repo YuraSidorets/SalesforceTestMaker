@@ -1,0 +1,37 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+12:57:22.7 (7027127)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+12:57:22.7 (7048188)|EXECUTION_STARTED
+12:57:22.7 (7054417)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+12:57:22.7 (37603135)|SYSTEM_MODE_ENTER|false
+12:57:22.7 (38077383)|SOQL_EXECUTE_BEGIN|[6]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c WHERE Name LIKE '%Multiple%' LIMIT 1
+12:57:22.7 (45480262)|SOQL_EXECUTE_END|[6]|Rows:1
+12:57:22.7 (49259691)|SOQL_EXECUTE_BEGIN|[45]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+12:57:22.7 (52853801)|SOQL_EXECUTE_END|[45]|Rows:1
+12:57:22.7 (53145419)|USER_DEBUG|[47]|DEBUG|null
+12:57:22.7 (53632976)|SYSTEM_MODE_EXIT|false
+12:57:22.7 (53891891)|FATAL_ERROR|System.NullPointerException: Attempt to de-reference a null object
+
+Class.TestCustomController.QuestionWrapper.<init>: line 49, column 1
+Class.TestCustomController.<init>: line 7, column 1
+AnonymousBlock: line 1, column 1
+AnonymousBlock: line 1, column 1
+12:57:22.53 (53942965)|CUMULATIVE_LIMIT_USAGE
+12:57:22.53 (53942965)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+12:57:22.53 (53942965)|CUMULATIVE_LIMIT_USAGE_END
+
+12:57:22.7 (53989759)|CODE_UNIT_FINISHED|execute_anonymous_apex
+12:57:22.7 (56079868)|EXECUTION_FINISHED

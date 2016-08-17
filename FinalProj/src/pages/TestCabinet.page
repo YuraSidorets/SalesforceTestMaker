@@ -1,0 +1,21 @@
+<apex:page controller="TestCustomController">
+  <apex:form >
+   <b><apex:outputText value="Your Time Starts Now: {!Timer}:00 Min" id="counter"/></b>
+    <apex:actionPoller action="{!incrementCounter}" rerender="counter ,button" interval="15"/>
+
+       <apex:pageBlock >
+           <apex:pageBlockSection >
+             <apex:pageBlockSectionItem > <apex:outputText value="{!question.questionText}"/></apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:selectRadio rendered="{!question.YesNoFlag}" >
+                    <apex:selectOption itemLabel="Yes" itemValue="m"/>
+                    <apex:selectOption itemLabel="No" itemValue="f"/>           
+                </apex:selectRadio>         
+            </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:commandButton action="{!NextQuestion}" value="Next"/>
+             </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>  
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

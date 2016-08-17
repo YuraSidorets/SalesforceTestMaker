@@ -1,0 +1,32 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+13:55:53.4 (4911142)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+13:55:53.4 (4936366)|EXECUTION_STARTED
+13:55:53.4 (4940102)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+13:55:53.4 (5559701)|SYSTEM_MODE_ENTER|false
+13:55:53.4 (5881621)|USER_DEBUG|[12]|DEBUG|-1
+13:55:53.4 (6106778)|SOQL_EXECUTE_BEGIN|[14]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c
+13:55:53.4 (9358717)|SOQL_EXECUTE_END|[14]|Rows:2
+13:55:53.4 (13411204)|SOQL_EXECUTE_BEGIN|[60]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+13:55:53.4 (15484994)|SOQL_EXECUTE_END|[60]|Rows:3
+13:55:53.4 (15674312)|USER_DEBUG|[64]|DEBUG|{}
+13:55:53.4 (16536214)|SYSTEM_MODE_EXIT|false
+13:55:53.16 (16594246)|CUMULATIVE_LIMIT_USAGE
+13:55:53.16 (16594246)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:55:53.16 (16594246)|CUMULATIVE_LIMIT_USAGE_END
+
+13:55:53.4 (16637770)|CODE_UNIT_FINISHED|execute_anonymous_apex
+13:55:53.4 (19130367)|EXECUTION_FINISHED

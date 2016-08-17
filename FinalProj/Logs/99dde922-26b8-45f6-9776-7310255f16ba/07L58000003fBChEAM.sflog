@@ -1,0 +1,52 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+09:20:18.7 (7638719)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+09:20:18.7 (7666119)|EXECUTION_STARTED
+09:20:18.7 (7673569)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+09:20:18.7 (11306382)|SYSTEM_MODE_ENTER|false
+09:20:18.7 (12388640)|SOQL_EXECUTE_BEGIN|[25]|Aggregations:0|SELECT Id, Test__c, User__c FROM TestToUser__c 
+09:20:18.7 (16274322)|SOQL_EXECUTE_END|[25]|Rows:0
+09:20:18.7 (17018451)|SOQL_EXECUTE_BEGIN|[30]|Aggregations:0|SELECT Id, Avalible__c, Avalible_From__c, Avalible_To__c, Guide__c, Randomize_Not_Required__c, Time_Limit__c FROM Test__c 
+09:20:18.7 (18885982)|SOQL_EXECUTE_END|[30]|Rows:0
+09:20:18.7 (19312777)|SOQL_EXECUTE_BEGIN|[14]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c
+09:20:18.7 (22165168)|SOQL_EXECUTE_END|[14]|Rows:4
+09:20:18.7 (27332974)|SOQL_EXECUTE_BEGIN|[64]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+09:20:18.7 (30736868)|SOQL_EXECUTE_END|[64]|Rows:3
+09:20:18.7 (31959821)|USER_DEBUG|[70]|DEBUG|Multiple?
+09:20:18.7 (32204697)|USER_DEBUG|[73]|DEBUG|YesNo?
+09:20:18.7 (32828339)|SOQL_EXECUTE_BEGIN|[64]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+09:20:18.7 (36156818)|SOQL_EXECUTE_END|[64]|Rows:2
+09:20:18.7 (36440307)|USER_DEBUG|[70]|DEBUG|NewMultiple??
+09:20:18.7 (36669773)|USER_DEBUG|[73]|DEBUG|NewYN?
+09:20:18.7 (36746326)|SYSTEM_MODE_EXIT|false
+09:20:18.7 (36837580)|SYSTEM_MODE_ENTER|false
+09:20:18.7 (37028919)|SYSTEM_MODE_EXIT|false
+09:20:18.7 (37080798)|SYSTEM_MODE_ENTER|false
+09:20:18.7 (37154551)|SYSTEM_MODE_EXIT|false
+09:20:18.7 (37196645)|SYSTEM_MODE_ENTER|false
+09:20:18.7 (37268687)|SYSTEM_MODE_EXIT|false
+09:20:18.7 (37310900)|SYSTEM_MODE_ENTER|false
+09:20:18.7 (37375251)|SYSTEM_MODE_EXIT|false
+09:20:18.37 (37450248)|CUMULATIVE_LIMIT_USAGE
+09:20:18.37 (37450248)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 5 out of 100
+  Number of query rows: 9 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:20:18.37 (37450248)|CUMULATIVE_LIMIT_USAGE_END
+
+09:20:18.7 (37511406)|CODE_UNIT_FINISHED|execute_anonymous_apex
+09:20:18.7 (39908387)|EXECUTION_FINISHED

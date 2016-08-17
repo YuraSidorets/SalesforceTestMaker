@@ -1,0 +1,43 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+14:32:09.5 (5966292)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+14:32:09.5 (5987032)|EXECUTION_STARTED
+14:32:09.5 (5993687)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+14:32:09.5 (8527051)|SYSTEM_MODE_ENTER|false
+14:32:09.5 (9134127)|SOQL_EXECUTE_BEGIN|[11]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c
+14:32:09.5 (13231167)|SOQL_EXECUTE_END|[11]|Rows:3
+14:32:09.5 (13561922)|USER_DEBUG|[12]|DEBUG|(Question__c:{Id=a0158000009G5gHAAS, Question_Text__c=Multiple?, Required_Question__c=false, RecordTypeId=01258000000gbCeAAI}, Question__c:{Id=a0158000009G5imAAC, Question_Text__c=YesNo?, Required_Question__c=false, RecordTypeId=01258000000gbCZAAY, Right_Answer__c=Yes}, Question__c:{Id=a0158000009G5yEAAS, Question_Text__c=NewYN?, Required_Question__c=false, RecordTypeId=01258000000gbCZAAY, Right_Answer__c=Yes})
+14:32:09.5 (18086580)|SOQL_EXECUTE_BEGIN|[53]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+14:32:09.5 (21512677)|SOQL_EXECUTE_END|[53]|Rows:3
+14:32:09.5 (23091471)|USER_DEBUG|[22]|DEBUG|0
+14:32:09.5 (23453611)|USER_DEBUG|[24]|DEBUG|QuestionWrapper:[CheckedAnswers={AnswerWrapper:[questionText=No Multiple, rightAnswer=false]=false, AnswerWrapper:[questionText=Whuuut?, rightAnswer=false]=false, AnswerWrapper:[questionText=Yes Multiple, rightAnswer=true]=false}, MultipleFlag=true, YesNoFlag=false, multipleAnswers=(Answer__c:{Id=a0458000005M3EHAA0, Text__c=Yes Multiple, Right__c=true, Question__c=a0158000009G5gHAAS}, Answer__c:{Id=a0458000005M3SdAAK, Text__c=Whuuut?, Right__c=false, Question__c=a0158000009G5gHAAS}, Answer__c:{Id=a0458000005M3S9AAK, Text__c=No Multiple, Right__c=false, Question__c=a0158000009G5gHAAS}), questionText=Multiple?, rightAnswer=null]
+14:32:09.5 (23477256)|SYSTEM_MODE_EXIT|false
+14:32:09.5 (23541448)|SYSTEM_MODE_ENTER|false
+14:32:09.5 (23592521)|USER_DEBUG|[22]|DEBUG|1
+14:32:09.5 (23633643)|USER_DEBUG|[24]|DEBUG|QuestionWrapper:[CheckedAnswers={}, MultipleFlag=false, YesNoFlag=true, multipleAnswers=null, questionText=YesNo?, rightAnswer=null]
+14:32:09.5 (23645374)|SYSTEM_MODE_EXIT|false
+14:32:09.5 (23673099)|SYSTEM_MODE_ENTER|false
+14:32:09.5 (23720161)|USER_DEBUG|[22]|DEBUG|2
+14:32:09.5 (23759787)|USER_DEBUG|[24]|DEBUG|QuestionWrapper:[CheckedAnswers={}, MultipleFlag=false, YesNoFlag=true, multipleAnswers=null, questionText=NewYN?, rightAnswer=null]
+14:32:09.5 (23771149)|SYSTEM_MODE_EXIT|false
+14:32:09.23 (23823920)|CUMULATIVE_LIMIT_USAGE
+14:32:09.23 (23823920)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 6 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+14:32:09.23 (23823920)|CUMULATIVE_LIMIT_USAGE_END
+
+14:32:09.5 (23868569)|CODE_UNIT_FINISHED|execute_anonymous_apex
+14:32:09.5 (25367036)|EXECUTION_FINISHED

@@ -1,0 +1,46 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+15:53:53.4 (4904250)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+15:53:53.4 (4921650)|EXECUTION_STARTED
+15:53:53.4 (4927668)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+15:53:53.4 (5495504)|SYSTEM_MODE_ENTER|false
+15:53:53.4 (5981144)|SOQL_EXECUTE_BEGIN|[10]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c
+15:53:53.4 (8819561)|SOQL_EXECUTE_END|[10]|Rows:4
+15:53:53.4 (12155242)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+15:53:53.4 (15164369)|SOQL_EXECUTE_END|[49]|Rows:3
+15:53:53.4 (16091005)|USER_DEBUG|[57]|DEBUG|YesNo?
+15:53:53.4 (16643604)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+15:53:53.4 (18955691)|SOQL_EXECUTE_END|[49]|Rows:2
+15:53:53.4 (19467213)|USER_DEBUG|[57]|DEBUG|NewYN?
+15:53:53.4 (19507620)|SYSTEM_MODE_EXIT|false
+15:53:53.4 (19574834)|SYSTEM_MODE_ENTER|false
+15:53:53.4 (19704285)|SYSTEM_MODE_EXIT|false
+15:53:53.4 (19741423)|SYSTEM_MODE_ENTER|false
+15:53:53.4 (19810336)|SYSTEM_MODE_EXIT|false
+15:53:53.4 (19847509)|SYSTEM_MODE_ENTER|false
+15:53:53.4 (19918531)|SYSTEM_MODE_EXIT|false
+15:53:53.4 (19959749)|SYSTEM_MODE_ENTER|false
+15:53:53.4 (20018983)|SYSTEM_MODE_EXIT|false
+15:53:53.20 (20068924)|CUMULATIVE_LIMIT_USAGE
+15:53:53.20 (20068924)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 9 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:53:53.20 (20068924)|CUMULATIVE_LIMIT_USAGE_END
+
+15:53:53.4 (20115660)|CODE_UNIT_FINISHED|execute_anonymous_apex
+15:53:53.4 (21774777)|EXECUTION_FINISHED

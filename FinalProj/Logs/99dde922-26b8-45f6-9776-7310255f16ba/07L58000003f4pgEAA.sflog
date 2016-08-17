@@ -1,0 +1,33 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+13:35:37.9 (9941172)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+13:35:37.9 (9977427)|EXECUTION_STARTED
+13:35:37.9 (9988215)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+13:35:37.9 (50404651)|SYSTEM_MODE_ENTER|false
+13:35:37.9 (51333387)|SOQL_EXECUTE_BEGIN|[10]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c
+13:35:37.9 (56854000)|SOQL_EXECUTE_END|[10]|Rows:2
+13:35:37.9 (57395284)|USER_DEBUG|[11]|DEBUG|(Question__c:{Id=a0158000009G5gHAAS, Question_Text__c=Multiple?, Required_Question__c=false, RecordTypeId=01258000000gbCeAAI}, Question__c:{Id=a0158000009G5imAAC, Question_Text__c=YesNo?, Required_Question__c=false, RecordTypeId=01258000000gbCZAAY, Right_Answer__c=Yes})
+13:35:37.9 (63271154)|SOQL_EXECUTE_BEGIN|[59]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+13:35:37.9 (68492334)|SOQL_EXECUTE_END|[59]|Rows:3
+13:35:37.9 (68851647)|USER_DEBUG|[63]|DEBUG|{}
+13:35:37.9 (71044431)|USER_DEBUG|[16]|DEBUG|null
+13:35:37.9 (71096098)|SYSTEM_MODE_EXIT|false
+13:35:37.71 (71208862)|CUMULATIVE_LIMIT_USAGE
+13:35:37.71 (71208862)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 5 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:35:37.71 (71208862)|CUMULATIVE_LIMIT_USAGE_END
+
+13:35:37.9 (71309044)|CODE_UNIT_FINISHED|execute_anonymous_apex
+13:35:37.9 (73299884)|EXECUTION_FINISHED

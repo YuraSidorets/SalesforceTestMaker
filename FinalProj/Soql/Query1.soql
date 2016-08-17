@@ -1,0 +1,1 @@
+SELECT Id, Name, Avalible_From__c FROM Question__c WHERE Id != null

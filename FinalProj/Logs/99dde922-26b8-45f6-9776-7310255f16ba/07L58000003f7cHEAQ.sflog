@@ -1,0 +1,40 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+Execute Anonymous: test1.NextQuestion();
+Execute Anonymous: test1.NextQuestion();
+15:43:42.7 (7876772)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+15:43:42.7 (7921752)|EXECUTION_STARTED
+15:43:42.7 (7933584)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+15:43:42.7 (43250933)|SYSTEM_MODE_ENTER|false
+15:43:42.7 (44486396)|SOQL_EXECUTE_BEGIN|[10]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c
+15:43:42.7 (49752577)|SOQL_EXECUTE_END|[10]|Rows:4
+15:43:42.7 (55161267)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+15:43:42.7 (59895353)|SOQL_EXECUTE_END|[49]|Rows:3
+15:43:42.7 (62629363)|USER_DEBUG|[57]|DEBUG|YesNo?
+15:43:42.7 (63722764)|SOQL_EXECUTE_BEGIN|[49]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+15:43:42.7 (69287727)|SOQL_EXECUTE_END|[49]|Rows:2
+15:43:42.7 (70245417)|USER_DEBUG|[57]|DEBUG|NewYN?
+15:43:42.7 (70326997)|SYSTEM_MODE_EXIT|false
+15:43:42.7 (70446433)|SYSTEM_MODE_ENTER|false
+15:43:42.7 (70713037)|SYSTEM_MODE_EXIT|false
+15:43:42.7 (70776411)|SYSTEM_MODE_ENTER|false
+15:43:42.7 (70891235)|SYSTEM_MODE_EXIT|false
+15:43:42.70 (70982432)|CUMULATIVE_LIMIT_USAGE
+15:43:42.70 (70982432)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 3 out of 100
+  Number of query rows: 9 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+15:43:42.70 (70982432)|CUMULATIVE_LIMIT_USAGE_END
+
+15:43:42.7 (71063218)|CODE_UNIT_FINISHED|execute_anonymous_apex
+15:43:42.7 (73057115)|EXECUTION_FINISHED

@@ -1,0 +1,32 @@
+34.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WORKFLOW,INFO
+Execute Anonymous: TestCustomController test1 = new TestCustomController();
+13:03:24.7 (7015738)|USER_INFO|[EXTERNAL]|00558000001UD72|finalproject@dev.com|Greenwich Mean Time|GMT+01:00
+13:03:24.7 (7041616)|EXECUTION_STARTED
+13:03:24.7 (7048047)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+13:03:24.7 (10103663)|SYSTEM_MODE_ENTER|false
+13:03:24.7 (10695833)|SOQL_EXECUTE_BEGIN|[6]|Aggregations:0|SELECT Id, Question_Text__c, Required_Question__c, RecordTypeId, Right_Answer__c FROM Question__c WHERE Name LIKE '%Multiple%' LIMIT 1
+13:03:24.7 (19094606)|SOQL_EXECUTE_END|[6]|Rows:1
+13:03:24.7 (22197490)|SOQL_EXECUTE_BEGIN|[46]|Aggregations:0|SELECT Id, Text__c, Right__c, Question__c FROM Answer__c WHERE Question__c = :tmpVar1
+13:03:24.7 (24952316)|SOQL_EXECUTE_END|[46]|Rows:1
+13:03:24.7 (25232203)|USER_DEBUG|[50]|DEBUG|{}
+13:03:24.7 (26186515)|USER_DEBUG|[8]|DEBUG|QuestionWrapper:[CheckedAnswers={AnswerWrapper:[questionText=Yes Multiple, rightAnswer=true]=false}, MultipleFlag=true, YesNoFlag=false, multipleAnswers=(Answer__c:{Id=a0458000005M3EHAA0, Text__c=Yes Multiple, Right__c=true, Question__c=a0158000009G5gHAAS}), questionText=Multiple?, questionType=null, rightAnswer=null]
+13:03:24.7 (26209864)|SYSTEM_MODE_EXIT|false
+13:03:24.26 (26273240)|CUMULATIVE_LIMIT_USAGE
+13:03:24.26 (26273240)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 2 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+13:03:24.26 (26273240)|CUMULATIVE_LIMIT_USAGE_END
+
+13:03:24.7 (26319519)|CODE_UNIT_FINISHED|execute_anonymous_apex
+13:03:24.7 (28041688)|EXECUTION_FINISHED

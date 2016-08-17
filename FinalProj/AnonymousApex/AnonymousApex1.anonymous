@@ -1,0 +1,5 @@
+TestCustomController test1 = new TestCustomController();
+test1.NextQuestion();
+test1.NextQuestion();
+test1.NextQuestion();
+test1.NextQuestion();
