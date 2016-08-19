@@ -9,7 +9,7 @@
     <SecurityToken>SJOe9A4SSCuSPmH8cXsyL9LAmyVmsfcdDMTKEr4AT5fUsOFUVPikkw==</SecurityToken>
     <Domain />
     <Environment>0</Environment>
-    <ApexVersion>34.0</ApexVersion>
+    <ApexVersion>37.0</ApexVersion>
     <Name>FinalProj</Name>
     <AssemblyName>FinalProj</AssemblyName>
     <RootNamespace>FinalProj</RootNamespace>
@@ -31,6 +31,20 @@
     <Folder Include="staticresources\SiteSamples\img\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\AnswerWrapper.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\AnswerWrapper.cls</PhysicalRelativePath>
+      <Id>01p580000088sMGAAY</Id>
+      <Hash>8hMz3uZZFcili7M88LD6cQ==</Hash>
+      <LastModifiedDateUtcTicks>131160181390000000</LastModifiedDateUtcTicks>
+    </Compile>
+    <Compile Include="classes\AnswerWrapperTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\AnswerWrapperTest.cls</PhysicalRelativePath>
+      <Id>01p580000088sY2AAI</Id>
+      <Hash>gT5d2L5TBXbvj3nr2zdnsw==</Hash>
+      <LastModifiedDateUtcTicks>131160671650000000</LastModifiedDateUtcTicks>
+    </Compile>
     <Compile Include="classes\ChangePasswordController.cls">
       <SubType>Class</SubType>
       <PhysicalRelativePath>src\classes\ChangePasswordController.cls</PhysicalRelativePath>
@@ -44,6 +58,13 @@
       <Id>01p580000088YlEAAU</Id>
       <Hash>dPIkufIQdG33PbFDL7ol1A==</Hash>
       <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
+    </Compile>
+    <Compile Include="classes\DataHelper.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\DataHelper.cls</PhysicalRelativePath>
+      <Id>01p580000088sM1AAI</Id>
+      <Hash>Qw8X4acKj1qWLPwQ4/uoDw==</Hash>
+      <LastModifiedDateUtcTicks>131160263920000000</LastModifiedDateUtcTicks>
     </Compile>
     <Compile Include="classes\ForgotPasswordController.cls">
       <SubType>Class</SubType>
@@ -63,8 +84,8 @@
       <SubType>Class</SubType>
       <PhysicalRelativePath>src\classes\MyProfilePageController.cls</PhysicalRelativePath>
       <Id>01p580000088YlHAAU</Id>
-      <Hash>H6VL99jZpK4JNLXvUlqFNA==</Hash>
-      <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
+      <Hash>0PLjlhb8qxLh4GjLHPj7xg==</Hash>
+      <LastModifiedDateUtcTicks>131160312210000000</LastModifiedDateUtcTicks>
     </Compile>
     <Compile Include="classes\MyProfilePageControllerTest.cls">
       <SubType>Class</SubType>
@@ -72,6 +93,13 @@
       <Id>01p580000088YlIAAU</Id>
       <Hash>RvPgBTrJUfqPD9qYrGN4GA==</Hash>
       <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
+    </Compile>
+    <Compile Include="classes\QuestionWrapper.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\QuestionWrapper.cls</PhysicalRelativePath>
+      <Id>01p580000088sMBAAY</Id>
+      <Hash>Z33j9yZD+uLdF/cI2kwr0Q==</Hash>
+      <LastModifiedDateUtcTicks>131160194840000000</LastModifiedDateUtcTicks>
     </Compile>
     <Compile Include="classes\SiteLoginController.cls">
       <SubType>Class</SubType>
@@ -101,12 +129,33 @@
       <Hash>5CxIb2ft7md2s6P4HpjQ9g==</Hash>
       <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
     </Compile>
+    <Compile Include="classes\TestCabinetPageControllerTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\TestCabinetPageControllerTest.cls</PhysicalRelativePath>
+      <Id>01p580000088sNsAAI</Id>
+      <Hash>573/KpSVpftS/fnPArQXzA==</Hash>
+      <LastModifiedDateUtcTicks>131160671480000000</LastModifiedDateUtcTicks>
+    </Compile>
     <Compile Include="classes\TestCustomController.cls">
       <PhysicalRelativePath>src\classes\TestCustomController.cls</PhysicalRelativePath>
       <SubType>Class</SubType>
       <Id>01p580000088VljAAE</Id>
-      <LastModifiedDateUtcTicks>131159159530000000</LastModifiedDateUtcTicks>
-      <Hash>omSOp3XAOetGHfoM4DIFZQ==</Hash>
+      <LastModifiedDateUtcTicks>131160183180000000</LastModifiedDateUtcTicks>
+      <Hash>+V5dxLkMKcbNNmV5GCJBVg==</Hash>
+    </Compile>
+    <Compile Include="classes\TestWrapper.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\TestWrapper.cls</PhysicalRelativePath>
+      <Id>01p580000088sM6AAI</Id>
+      <Hash>M7DXxVyudEOfe9fRzseMDw==</Hash>
+      <LastModifiedDateUtcTicks>131160263920000000</LastModifiedDateUtcTicks>
+    </Compile>
+    <Compile Include="classes\TestWrapperTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\TestWrapperTest.cls</PhysicalRelativePath>
+      <Id>01p580000088sZPAAY</Id>
+      <Hash>/IYBZw6ecdRh2WGB4CtDsg==</Hash>
+      <LastModifiedDateUtcTicks>131160681600000000</LastModifiedDateUtcTicks>
     </Compile>
     <Compile Include="pages\AnswersHome.page">
       <SubType>Page</SubType>
@@ -217,8 +266,8 @@
       <PhysicalRelativePath>src\pages\TestCabinet.page</PhysicalRelativePath>
       <SubType>Page</SubType>
       <Id>06658000002viRzAAI</Id>
-      <LastModifiedDateUtcTicks>131158198560000000</LastModifiedDateUtcTicks>
-      <Hash>aGHo32ru1mHslA6OFZqwYA==</Hash>
+      <LastModifiedDateUtcTicks>131160311070000000</LastModifiedDateUtcTicks>
+      <Hash>WvxBjP+jI2LDvcwlaVu00w==</Hash>
     </Compile>
     <Compile Include="pages\Unauthorized.page">
       <SubType>Page</SubType>
@@ -569,15 +618,15 @@
       <PhysicalRelativePath>src\objects\TestToUser__c.object</PhysicalRelativePath>
       <SubType>Object</SubType>
       <Id>01I580000014sXUEAY</Id>
-      <LastModifiedDateUtcTicks>131158168490000000</LastModifiedDateUtcTicks>
-      <Hash>Ggzy9nCiwi6z14wrPriKww==</Hash>
+      <LastModifiedDateUtcTicks>131160263680000000</LastModifiedDateUtcTicks>
+      <Hash>iIvArM7XuB+gr3Q3iNrPpw==</Hash>
     </Object>
     <Object Include="objects\Test__c.object">
       <PhysicalRelativePath>src\objects\Test__c.object</PhysicalRelativePath>
       <SubType>Object</SubType>
       <Id>01I580000014sW2EAI</Id>
-      <LastModifiedDateUtcTicks>131158145359644113</LastModifiedDateUtcTicks>
-      <Hash>4CBJno7xIV2sDHTzbopRDA==</Hash>
+      <LastModifiedDateUtcTicks>131160266880000000</LastModifiedDateUtcTicks>
+      <Hash>6PGwcVmSZJM2XZUgNdoqOA==</Hash>
     </Object>
     <Object Include="objects\User.object">
       <PhysicalRelativePath>src\objects\User.object</PhysicalRelativePath>
@@ -606,11 +655,25 @@
       <SubType>StaticResource</SubType>
       <PhysicalRelativePath>resource-bundles\TWS_Sync_Data.resource</PhysicalRelativePath>
       <Id>08158000000hoKlAAI</Id>
-      <Hash>x64FdjgbuVmHEkooT4kfCg==</Hash>
-      <LastModifiedDateUtcTicks>131158145430000000</LastModifiedDateUtcTicks>
+      <Hash>O52U0V1Akdc7kRF7b9yfYw==</Hash>
+      <LastModifiedDateUtcTicks>131159779650000000</LastModifiedDateUtcTicks>
     </Static>
   </ItemGroup>
   <ItemGroup>
+    <None Include="classes\AnswerWrapper.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\AnswerWrapper.cls-meta.xml</PhysicalRelativePath>
+      <Hash>qPYxbthsTjFyWy7IXTGaXw==</Hash>
+      <LastModifiedDateUtcTicks>131160181390000000</LastModifiedDateUtcTicks>
+      <DependentUpon>src\classes\AnswerWrapper.cls</DependentUpon>
+    </None>
+    <None Include="classes\AnswerWrapperTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\AnswerWrapperTest.cls-meta.xml</PhysicalRelativePath>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+      <LastModifiedDateUtcTicks>131160671650000000</LastModifiedDateUtcTicks>
+      <DependentUpon>src\classes\AnswerWrapperTest.cls</DependentUpon>
+    </None>
     <None Include="classes\ChangePasswordController.cls-meta.xml">
       <SubType>Metadata</SubType>
       <PhysicalRelativePath>src\classes\ChangePasswordController.cls-meta.xml</PhysicalRelativePath>
@@ -624,6 +687,13 @@
       <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
       <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\classes\ChangePasswordControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\DataHelper.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\DataHelper.cls-meta.xml</PhysicalRelativePath>
+      <Hash>qPYxbthsTjFyWy7IXTGaXw==</Hash>
+      <LastModifiedDateUtcTicks>131160263920000000</LastModifiedDateUtcTicks>
+      <DependentUpon>src\classes\DataHelper.cls</DependentUpon>
     </None>
     <None Include="classes\ForgotPasswordController.cls-meta.xml">
       <SubType>Metadata</SubType>
@@ -643,7 +713,7 @@
       <SubType>Metadata</SubType>
       <PhysicalRelativePath>src\classes\MyProfilePageController.cls-meta.xml</PhysicalRelativePath>
       <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
-      <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160312210000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\classes\MyProfilePageController.cls</DependentUpon>
     </None>
     <None Include="classes\MyProfilePageControllerTest.cls-meta.xml">
@@ -652,6 +722,13 @@
       <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
       <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\classes\MyProfilePageControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\QuestionWrapper.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\QuestionWrapper.cls-meta.xml</PhysicalRelativePath>
+      <Hash>qPYxbthsTjFyWy7IXTGaXw==</Hash>
+      <LastModifiedDateUtcTicks>131160194840000000</LastModifiedDateUtcTicks>
+      <DependentUpon>src\classes\QuestionWrapper.cls</DependentUpon>
     </None>
     <None Include="classes\SiteLoginController.cls-meta.xml">
       <SubType>Metadata</SubType>
@@ -681,12 +758,33 @@
       <LastModifiedDateUtcTicks>131158326400000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\classes\SiteRegisterControllerTest.cls</DependentUpon>
     </None>
+    <None Include="classes\TestCabinetPageControllerTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\TestCabinetPageControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+      <LastModifiedDateUtcTicks>131160671480000000</LastModifiedDateUtcTicks>
+      <DependentUpon>src\classes\TestCabinetPageControllerTest.cls</DependentUpon>
+    </None>
     <None Include="classes\TestCustomController.cls-meta.xml">
       <PhysicalRelativePath>src\classes\TestCustomController.cls-meta.xml</PhysicalRelativePath>
       <SubType>Metadata</SubType>
       <DependentUpon>classes\TestCustomController.cls</DependentUpon>
-      <LastModifiedDateUtcTicks>131159073420000000</LastModifiedDateUtcTicks>
-      <Hash>WQBjOx4JsainCl68NxGRRA==</Hash>
+      <LastModifiedDateUtcTicks>131160183180000000</LastModifiedDateUtcTicks>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+    </None>
+    <None Include="classes\TestWrapper.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\TestWrapper.cls-meta.xml</PhysicalRelativePath>
+      <Hash>qPYxbthsTjFyWy7IXTGaXw==</Hash>
+      <LastModifiedDateUtcTicks>131160263920000000</LastModifiedDateUtcTicks>
+      <DependentUpon>src\classes\TestWrapper.cls</DependentUpon>
+    </None>
+    <None Include="classes\TestWrapperTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\TestWrapperTest.cls-meta.xml</PhysicalRelativePath>
+      <Hash>chSpUW6sUNTEfXRjwHBJgg==</Hash>
+      <LastModifiedDateUtcTicks>131160681600000000</LastModifiedDateUtcTicks>
+      <DependentUpon>src\classes\TestWrapperTest.cls</DependentUpon>
     </None>
     <None Include="pages\AnswersHome.page-meta.xml">
       <SubType>Metadata</SubType>
@@ -797,7 +895,7 @@
       <PhysicalRelativePath>src\pages\TestCabinet.page-meta.xml</PhysicalRelativePath>
       <SubType>Metadata</SubType>
       <DependentUpon>pages\TestCabinet.page</DependentUpon>
-      <LastModifiedDateUtcTicks>131158198560000000</LastModifiedDateUtcTicks>
+      <LastModifiedDateUtcTicks>131160311070000000</LastModifiedDateUtcTicks>
       <Hash>2vjWWR5xClR7T5Kw5v5Yfw==</Hash>
     </None>
     <None Include="pages\Unauthorized.page-meta.xml">
@@ -814,18 +912,6 @@
       <LastModifiedDateUtcTicks>131158326420000000</LastModifiedDateUtcTicks>
       <DependentUpon>src\pages\UnderConstruction.page</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Soql Include="Soql\Query1.soql">
-      <SubType>Soql</SubType>
-      <PhysicalRelativePath>Soql\Query1.soql</PhysicalRelativePath>
-    </Soql>
-  </ItemGroup>
-  <ItemGroup>
-    <AnonymousApex Include="AnonymousApex\AnonymousApex1.anonymous">
-      <SubType>AnonymousApex</SubType>
-      <PhysicalRelativePath>AnonymousApex\AnonymousApex1.anonymous</PhysicalRelativePath>
-    </AnonymousApex>
   </ItemGroup>
   <ItemGroup>
     <StaticZipItem Include="staticresources\SiteSamples\SiteStyles.css">

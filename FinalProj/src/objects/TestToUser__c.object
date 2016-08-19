@@ -52,17 +52,20 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Percent__c</fullName>
+        <fullName>Result__c</fullName>
+        <defaultValue>-1</defaultValue>
         <externalId>false</externalId>
-        <label>Percent</label>
-        <precision>3</precision>
+        <label>Result</label>
+        <precision>2</precision>
         <required>false</required>
-        <scale>1</scale>
+        <scale>0</scale>
         <trackTrending>false</trackTrending>
-        <type>Percent</type>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Test__c</fullName>
@@ -82,15 +85,6 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>User</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>User.Profile.Name</field>
-                <operation>startsWith</operation>
-                <value>Standard User</value>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
         <referenceTo>User</referenceTo>
         <relationshipName>UserTests</relationshipName>
         <required>false</required>

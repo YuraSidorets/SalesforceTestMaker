@@ -1,4 +1,4 @@
-TestWrapper<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
         <actionName>Accept</actionName>
@@ -52,6 +52,7 @@ TestWrapper<?xml version="1.0" encoding="UTF-8"?>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -71,14 +72,6 @@ TestWrapper<?xml version="1.0" encoding="UTF-8"?>
         <type>DateTime</type>
     </fields>
     <fields>
-        <fullName>Avalible__c</fullName>
-        <defaultValue>true</defaultValue>
-        <externalId>false</externalId>
-        <label>Avalible</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>Guide__c</fullName>
         <externalId>false</externalId>
         <label>Guide</label>
@@ -93,6 +86,15 @@ TestWrapper<?xml version="1.0" encoding="UTF-8"?>
         <label>Randomize Not Required Question</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Results__c</fullName>
+        <externalId>false</externalId>
+        <label>Results</label>
+        <summaryForeignKey>TestToUser__c.Test__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>Time_Limit__c</fullName>
@@ -119,4 +121,10 @@ TestWrapper<?xml version="1.0" encoding="UTF-8"?>
     <pluralLabel>Tests</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Time_From_Must_be_erlier_than_Time_To</fullName>
+        <active>true</active>
+        <errorConditionFormula>Avalible_From__c &gt;  Avalible_To__c</errorConditionFormula>
+        <errorMessage>Test Can&apos;t be avalible erlier than end!</errorMessage>
+    </validationRules>
 </CustomObject>

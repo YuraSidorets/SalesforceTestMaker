@@ -1,21 +1,76 @@
 <apex:page controller="TestCustomController">
-  <apex:form >
-   <b><apex:outputText value="Your Time Starts Now: {!Timer}:00 Min" id="counter"/></b>
-    <apex:actionPoller action="{!incrementCounter}" rerender="counter ,button" interval="15"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<div class="blueflame">
 
-       <apex:pageBlock >
-           <apex:pageBlockSection >
-             <apex:pageBlockSectionItem > <apex:outputText value="{!question.questionText}"/></apex:pageBlockSectionItem>
-            <apex:pageBlockSectionItem >
-                <apex:selectRadio rendered="{!question.YesNoFlag}" >
-                    <apex:selectOption itemLabel="Yes" itemValue="m"/>
-                    <apex:selectOption itemLabel="No" itemValue="f"/>           
-                </apex:selectRadio>         
-            </apex:pageBlockSectionItem>
-             <apex:pageBlockSectionItem >
-                 <apex:commandButton action="{!NextQuestion}" value="Next"/>
-             </apex:pageBlockSectionItem>
-            </apex:pageBlockSection>  
-        </apex:pageBlock>
+  <apex:form >         
+      <apex:pageBlock id="test" > 
+           <apex:outputPanel rendered="{!RenderNoTestPage}">                  
+               <h3><apex:outputText value="No Tests Avalible Now" /> </h3>     
+        </apex:outputPanel> 
+      
+         <apex:outputPanel rendered="{!RenderTestSelection}">      
+            <apex:repeat value="{!AvalibleTests}" var="test">
+              <h4> <apex:outputText value="{!test.Name}" /></h4>&nbsp;&nbsp;
+              <apex:commandButton action="{!sendValue}" value="Select This Test" reRender="test" immediate="true" styleClass="btn btn-primary btn-lg active">
+                <apex:param name="param1" assignTo="{!value}" value="{!test.Name}" />
+            </apex:commandButton>
+            <br/>
+        </apex:repeat> 
+        
+        </apex:outputPanel> 
+          <apex:outputPanel rendered="{!RenderTestGuide}">  
+              <p><strong><apex:outputText value="Test Guide: {!ActiveTest.Guide}" /></strong></p> 
+               <br/>             
+               <apex:commandButton action="{!ReadGuide}" value="Next" reRender="test" styleClass="btn btn-primary btn-lg active"/>
+            <br/>
+        </apex:outputPanel> 
+
+        <apex:pageBlockSection rendered="{!RenderQuestions && ActiveTest.RenderQuestions}"> 
+                <apex:outputText value="{!ActiveTest.Questions[ActiveTest.CurrentNum].questionText}" />             
+                                            
+                     <apex:outputPanel rendered="{!ActiveTest.Questions[ActiveTest.CurrentNum].YesNoFlag}" >
+                      <div class="form-group">  <apex:selectRadio value="{!ActiveTest.Questions[ActiveTest.CurrentNum].UserAnswer}" >     
+                               <div class="radio">
+                                  <label>
+                                    <apex:selectOption itemLabel="Yes" itemValue="true" />    
+                                  </label>
+                                </div>
+                            <div class="radio">
+                                  <label>
+                            <apex:selectOption itemLabel="No" itemValue="false"/>
+                                 </label>
+                            </div>          
+                        </apex:selectRadio> 
+                      </div>
+                        <apex:outputText value="{!ActiveTest.Questions[ActiveTest.CurrentNum].UserAnswer}" id="i"/>
+                     <!-- <apex:commandButton reRender="i"/> -->
+                      </apex:outputPanel> 
+                        
+                       <apex:outputPanel rendered="{!ActiveTest.Questions[ActiveTest.CurrentNum].MultipleFlag}" >
+                         <div class="form-group"> 
+                         <apex:repeat value="{!ActiveTest.Questions[ActiveTest.CurrentNum].AnswersForUser}" var="answer" >
+                             <div class="checkbox">
+                                  <label>                         
+                               <apex:inputCheckbox value="{!answer.selected}" />&nbsp;<apex:outputText value="{!answer.questionText}"/><br/>
+                                 </label>
+                             </div>                                                                   
+                        </apex:repeat>    
+                          </div>                                 
+                       </apex:outputPanel>    
+                        
+             <apex:pageBlockSection >
+                 <apex:commandbutton action="{!ActiveTest.NextQuestion}" rerender="test" value="Next" styleClass="btn btn-primary btn-lg active"/>
+             </apex:pageBlockSection>
+               
+         </apex:pageBlockSection>
+         
+          <apex:outputPanel rendered="{!ActiveTest.RenderResultPage}">  
+              <h3>  <apex:outputText value="Test Result: {!ActiveTest.Result}" /> </h3> 
+        </apex:outputPanel> 
+        
+      </apex:pageBlock> 
+      <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </apex:form>
+    </div>
 </apex:page>
